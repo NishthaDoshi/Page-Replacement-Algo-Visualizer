@@ -1,5 +1,8 @@
 # Page-Replacement-Algo-Visualizer
 
+<img width="1064" alt="Screenshot 2024-11-04 at 3 03 32 PM" src="https://github.com/user-attachments/assets/9fcc4a92-4295-4017-a23c-2972e1071312">
+
+
 ## Features
 - FIFO (First-In-First-Out)
 
