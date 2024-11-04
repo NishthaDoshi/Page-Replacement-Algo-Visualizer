@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Replacement Algorithm Visualizer - Dark Theme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Page Replacement Algorithm Visualizer</h1>
+        
+        <div class="card">
+            <div class="algorithm-select">
+                <h2>Select Algorithm</h2>
+                <button class="btn btn-primary active" onclick="setAlgorithm('FIFO')">FIFO</button>
+                <button class="btn btn-primary" onclick="setAlgorithm('LRU')">LRU</button>
+            </div>
+            
+            <div class="input-group">
+                <input type="number" id="cacheSize" min="1" max="10" value="3" onchange="updateCacheSize(this.value)" placeholder="Cache size">
+                <input type="text" id="inputValue" placeholder="Enter value">
+                <button class="btn btn-success" onclick="addValue()">Add</button>
+                <button class="btn btn-danger" onclick="resetCache()">Reset</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Cache Status</h2>
+            <div class="cache-slots" id="cacheSlots">
+                <!-- Cache slots will be generated here -->
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="card stats-card">
+                <h3>Hits</h3>
+                <p id="hits">0</p>
+                <p id="hitRate">Rate: 0%</p>
+            </div>
+            <div class="card stats-card">
+                <h3>Misses</h3>
+                <p id="misses">0</p>
+                <p id="missRate">Rate: 0%</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Access Sequence</h2>
+            <div class="sequence" id="sequence">
+                <!-- Sequence items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
